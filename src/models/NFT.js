@@ -95,7 +95,7 @@ const nftSchema = new mongoose.Schema({
 
 // Indexes for better query performance
 nftSchema.index({ walletAddress: 1, createdAt: -1 });
-nftSchema.index({ eventData,eventName: 1, createdAt: -1 });
+nftSchema.index({ 'eventData.eventName': 1, createdAt: -1 });
 nftSchema.index({ networkChainId: 1 });
 
 // Virtual for IPFS gateway URL
